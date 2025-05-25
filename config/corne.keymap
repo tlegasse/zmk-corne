@@ -8,6 +8,17 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&mt {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <145>;
+    quick-tap-ms = <150>;  // Increased to make double-taps more reliable
+    require-prior-idle-ms = <100>;  // Slightly reduced to improve responsiveness
+    hold-trigger-key-positions = <0>;  // This makes hold trigger immediately when another key is pressed
+    hold-trigger-on-release;  // This can help with quick layer changes
+};
+
 / {
     combos {
         compatible = "zmk,combos";
