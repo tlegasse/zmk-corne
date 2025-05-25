@@ -19,14 +19,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE   &kp Q  &kp W  &kp E      &kp R           &kp T        &kp Y          &kp U    &kp I         &kp O    &kp P     &kp DELETE
-&kp ESCAPE  &kp A  &kp S  &kp D      &kp F           &kp G        &kp H          &kp J    &kp K         &kp L    &kp SEMI  &kp TAB
-&mo 0       &kp Z  &kp X  &kp C      &kp V           &kp B        &kp N          &kp M    &kp COMMA     &kp DOT  &kp FSLH  &kp LEFT_BRACKET
-                          &kp LCTRL  &kp LEFT_SHIFT  &kp SPACE    &kp BACKSPACE  &kp RET  &kp LEFT_GUI
+&kp GRAVE     &kp Q        &kp W        &kp E           &kp R           &kp T          &kp Y            &kp U    &kp I           &kp O        &kp P     &kp DELETE
+&kp ESCAPE    &mt RCTRL A  &mt LCTRL S  &mt LEFT_ALT D  &kp F           &kp G          &kp H            &kp J    &mt LEFT_ALT K  &mt LCTRL L  &kp S     &kp TAB
+&kp LEFT_GUI  &lt 1 Z      &kp X        &kp C           &kp V           &kp B          &kp N            &kp M    &kp COMMA       &kp DOT      &kp FSLH  &kp LEFT_BRACKET
+                                        &kp LCTRL       &kp LEFT_SHIFT  &lt 3 SPACE    &lt 2 BACKSPACE  &kp RET  &kp LEFT_GUI
             >;
         };
 
-        layer_3 {
+        Nav {
             bindings = <
 &trans  &kp HOME  &kp END         &kp LC(PERIOD)  &kp LC(PIPE)  &trans    &trans              &trans          &trans         &kp LC(T)  &kp RIGHT  &trans
 &trans  &trans    &kp LC(A)       &kp LC(SLASH)   &kp TAB       &trans    &kp LC(B)           &kp LEFT_ARROW  &trans         &kp PG_UP  &kp PG_DN  &trans
@@ -35,21 +35,30 @@
             >;
         };
 
-        layer_2 {
+        Numbers {
             bindings = <
-&trans  &trans      &trans          &trans        &trans        &trans        &trans  &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3  &trans  &trans
-&trans  &trans      &trans          &trans        &trans        &trans        &trans  &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6  &kp NUMBER_0  &trans
-&trans  &kp C_PLAY  &kp C_PREVIOUS  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_NEXT    &trans  &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9  &trans  &trans
+&trans  &trans      &trans          &trans        &trans        &trans        &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+&trans  &trans      &trans          &trans        &trans        &trans        &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
+&trans  &kp C_PLAY  &kp C_PREVIOUS  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_NEXT    &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans
                                     &trans        &trans        &trans        &trans  &trans        &trans
             >;
         };
 
-        symbols {
+        Symbols {
             bindings = <
-&trans  &kp LS(Q)         &kp LS(W)   &kp LS(E)     &kp LS(N5)             &kp TILDE           &kp GRAVE         &kp LS(NUMBER_2)   &kp LS(NUMBER_3)  &kp MINUS             &kp EQUAL     &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(N7)  &kp SQT       &kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_4)    &kp LS(NUMBER_6)  &kp LS(N9)         &kp LS(N0)        &kp LS(MINUS)         &kp LS(EQUAL) &trans
-&trans  &kp LS(Z)         &kp LS(N8)  &kp LS(APOS)  &kp RIGHT_BRACKET      &trans              &trans            &kp LS(BACKSLASH)  &kp BACKSLASH     &kp LS(LEFT_BRACKET)  &kp LBKT      &trans
-                                    &trans        &trans        &trans        &trans  &trans        &trans
+&trans  &kp LS(Q)         &kp LS(W)   &kp LS(E)     &kp LS(N5)             &kp TILDE           &kp GRAVE         &kp LS(NUMBER_2)   &kp LS(NUMBER_3)  &kp MINUS             &kp EQUAL      &trans
+&trans  &kp LS(NUMBER_1)  &kp LS(N7)  &kp SQT       &kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_4)    &kp LS(NUMBER_6)  &kp LS(N9)         &kp LS(N0)        &kp LS(MINUS)         &kp LS(EQUAL)  &trans
+&trans  &kp LS(Z)         &kp LS(N8)  &kp LS(APOS)  &kp RIGHT_BRACKET      &trans              &trans            &kp LS(BACKSLASH)  &kp BACKSLASH     &kp LS(LEFT_BRACKET)  &kp LBKT       &trans
+                                      &trans        &trans                 &trans              &trans            &trans             &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
