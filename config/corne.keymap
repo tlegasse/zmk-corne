@@ -5,13 +5,14 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Home {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -19,10 +20,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE     &kp Q        &kp W        &kp E           &kp R           &kp T          &kp Y            &kp U    &kp I           &kp O        &kp P     &kp DELETE
-&kp ESCAPE    &mt RCTRL A  &mt LCTRL S  &mt LEFT_ALT D  &kp F           &kp G          &kp H            &kp J    &mt LEFT_ALT K  &mt LCTRL L  &kp S     &kp TAB
-&kp LEFT_GUI  &lt 1 Z      &kp X        &kp C           &kp V           &kp B          &kp N            &kp M    &kp COMMA       &kp DOT      &kp FSLH  &kp LEFT_BRACKET
-                                        &kp LCTRL       &kp LEFT_SHIFT  &lt 3 SPACE    &lt 2 BACKSPACE  &kp RET  &kp LEFT_GUI
+&kp GRAVE     &kp Q    &kp W        &kp E           &kp R           &kp T          &kp Y            &kp U    &kp I           &kp O        &kp P     &kp DELETE
+&kp ESCAPE    &lt 1 A  &mt LCTRL S  &mt LEFT_ALT D  &kp F           &kp G          &kp H            &kp J    &mt LEFT_ALT K  &mt LCTRL L  &kp S     &kp TAB
+&kp LEFT_GUI  &kp Z    &kp X        &kp C           &kp V           &kp B          &kp N            &kp M    &kp COMMA       &kp DOT      &kp FSLH  &kp LEFT_BRACKET
+                                    &kp LCTRL       &kp LEFT_SHIFT  &lt 3 SPACE    &lt 2 BACKSPACE  &kp RET  &mo 4
             >;
         };
 
@@ -53,12 +54,12 @@
             >;
         };
 
-        layer_4 {
+        BT {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans &trans &trans &trans &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
     };
