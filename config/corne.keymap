@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        tmux_prefix {
+            bindings = <&kp LC(A)>;
+            key-positions = <32 31>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,7 +30,7 @@
 
             bindings = <
 &kp GRAVE     &kp Q    &kp W        &kp E           &kp R           &kp T          &kp Y            &kp U    &kp I           &kp O        &kp P     &kp DELETE
-&kp ESCAPE    &lt 1 A  &mt LCTRL S  &mt LEFT_ALT D  &kp F           &kp G          &kp H            &kp J    &mt LEFT_ALT K  &mt LCTRL L  &kp S     &kp TAB
+&kp ESCAPE    &lt 1 A  &mt LCTRL S  &mt LEFT_ALT D  &kp F           &kp G          &kp H            &kp J    &mt LEFT_ALT K  &mt LCTRL L  &kp SEMI  &kp TAB
 &kp LEFT_GUI  &kp Z    &kp X        &kp C           &kp V           &kp B          &kp N            &kp M    &kp COMMA       &kp DOT      &kp FSLH  &kp LEFT_BRACKET
                                     &kp LCTRL       &kp LEFT_SHIFT  &lt 3 SPACE    &lt 2 BACKSPACE  &kp RET  &mo 4
             >;
@@ -29,10 +38,10 @@
 
         Nav {
             bindings = <
-&trans  &trans  &kp HOME  &kp END         &kp LC(PERIOD)  &kp LC(PIPE)      &trans              &trans          &trans         &kp LC(T)      &kp RIGHT      &trans
-&trans  &trans  &trans    &kp LC(A)       &kp LC(SLASH)   &kp TAB           &kp LC(B)           &kp LEFT_ARROW  &trans         &kp LC(PG_UP)  &kp LC(PG_DN)  &trans
-&trans  &trans  &trans    &kp DOWN_ARROW  &kp UP_ARROW    &trans            &kp LC(LEFT_ARROW)  &trans          &kp LC(RIGHT)  &trans         &kp LC(Y)      &trans
-                                  &trans          &trans        &trans    &trans              &trans          &trans
+&trans  &trans  &kp HOME  &kp END         &kp LC(PERIOD)  &kp LC(PIPE)    &trans              &trans          &trans         &kp LC(T)      &kp RIGHT      &trans
+&trans  &trans  &trans    &kp LC(A)       &kp LC(SLASH)   &kp TAB         &kp LC(B)           &kp LEFT_ARROW  &trans         &kp LC(PG_UP)  &kp LC(PG_DN)  &trans
+&trans  &trans  &trans    &kp DOWN_ARROW  &kp UP_ARROW    &trans          &kp LC(LEFT_ARROW)  &trans          &kp LC(RIGHT)  &trans         &kp LC(Y)      &trans
+                          &trans          &trans          &trans          &trans              &trans          &trans
             >;
         };
 
